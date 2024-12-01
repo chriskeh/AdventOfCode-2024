@@ -13,7 +13,7 @@ def slurp_input(input_file):
     this_answer = set()
 
     with open(input_file, 'r') as f:
-        while (True):
+        while True:
             # Read a line.
             line = f.readline()
             # When readline returns an empty string, the file is fully read.
