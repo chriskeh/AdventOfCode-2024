@@ -31,18 +31,14 @@ def slurp_input(input_file):
 
 def check_level_increase(level):
     for pos in range(len(level) - 1):
-        if level[pos] >= level[pos + 1]:
-            return False
-        if int(level[pos + 1]) - int(level[pos]) > 3:
+        if level[pos] >= level[pos + 1] or int(level[pos + 1]) - int(level[pos]) > 3:
             return False
     return True
 
 
 def check_level_decrease(level):
     for pos in range(len(level) - 1):
-        if level[pos] <= level[pos + 1]:
-            return False
-        if int(level[pos]) - int(level[pos + 1]) > 3:
+        if level[pos] <= level[pos + 1] or int(level[pos]) - int(level[pos + 1]) > 3:
             return False
     return True
 
